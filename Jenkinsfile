@@ -1,10 +1,4 @@
-node {
-    
-    agent {
-     
-        label 'docker-slave-00006mhu038jh'
-        
-    }
+node ('docker-slave') {
     
     def buildNumber = BUILD_NUMBER
     def mavenHome= tool name: "maven", type: "maven"
