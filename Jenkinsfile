@@ -18,6 +18,11 @@ node ('docker-slave') {
         sh "docker build -t geethika609/hello-world:${buildNumber} ."
     }
     
+    stage("Installing Docker inside jnlp Docker container") {
+        
+        sh "curl -sSL https://get.docker.com/"
+    }
+    
     stage("Docker login and push") {
         
         withCredentials([string(credentialsId: 'DockerHubPwd', variable: 'DockerHubPwd')]) {
