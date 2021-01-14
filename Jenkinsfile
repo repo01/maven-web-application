@@ -15,7 +15,7 @@ node ('docker-slave') {
     
     stage("Installing Docker inside jnlp Docker container") {
         
-        sh "curl -sSL https://get.docker.com/ | sh"
+        sh "sudo curl -sSL https://get.docker.com/ | sh"
     }
     
     stage("Creation of Docker Image") {
