@@ -13,14 +13,14 @@ node ('docker-slave') {
         sh "${mavenHome}/bin/mvn clean package"
     }
     
-    stage("Creation of Docker Image") {
-        
-        sh "docker build -t geethika609/hello-world:${buildNumber} ."
-    }
-    
     stage("Installing Docker inside jnlp Docker container") {
         
         sh "curl -sSL https://get.docker.com/"
+    }
+    
+    stage("Creation of Docker Image") {
+        
+        sh "docker build -t geethika609/hello-world:${buildNumber} ."
     }
     
     stage("Docker login and push") {
