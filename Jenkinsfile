@@ -5,7 +5,7 @@ node {
     
     agent {
      
-        label 'docker-slave'
+        label 'docker-slave-00006mhu038jh'
         
     }
     
