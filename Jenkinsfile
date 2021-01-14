@@ -3,6 +3,12 @@ node {
     def buildNumber = BUILD_NUMBER
     def mavenHome= tool name: "maven", type: "maven"
     
+    agent {
+     
+        label 'docker-slave'
+        
+    }
+    
     stage ("Git clone") {
         
         git url: "https://github.com/repo01/maven-web-application.git", brach: "master"
