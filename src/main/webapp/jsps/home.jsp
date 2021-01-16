@@ -8,6 +8,6 @@
 </head>
 </head>
 <body>
-	<h1>Hello World Web Application deployed from docker-agent</h1>
+	<h1>Hello World Web Application using docker-agent</h1>
 </body>
 </html>
